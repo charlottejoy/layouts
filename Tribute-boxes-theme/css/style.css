@@ -1,0 +1,234 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  font-family: "helvetica", "arial", sans-serif;
+  font-size: 1.15em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: orange;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#main {
+  max-width: 1400px;
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.intro {
+  order: 1;
+  margin-left: 5vmin;
+}
+h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+h2 {
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+h3{
+  font-weight: bold;
+  font-variant: small-caps;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+}
+.scrolling-div {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  order: 3;
+}
+
+.card {
+  min-width: 40vmmin;
+  min-height: 40vmin;
+  color: black;
+  flex: 1 1 auto;
+  display: flex;
+  margin: 2vmin;
+  padding: 2vmin;
+  box-sizing: border-box;
+  overflow: auto;
+  opacity: 0.9;
+}
+
+.card:hover {
+  opacity: 1;
+  z-index: 4;
+  transform: scale(1.1);
+}
+
+.card:checked {/* if I add radio buttons, but probably better to make these take over most of page with jquery*/
+  z-index: 4;
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+
+.card--row--center {
+  flex-direction: row;
+  justicy-content: center;
+  align-items: center;
+}
+
+.card--column--center {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.card--column--top-center {
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card--row--center-space {
+  justify-content: space-around;
+  flex-direction: row;
+ align-items: center;
+}
+
+.card--column--top-left {
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+}
+  
+.card--green {
+  background: green;
+}
+.card--blue {
+  background: blue;
+}
+.card--red {
+  background: red;
+}
+
+
+
+.row-img {
+  max-height: 80%;
+  width: auto;
+  display: block;
+}
+
+.column-img{
+    max-width: 80%;
+  height: auto;
+  display: block;
+}
+#image {
+  /* to work with flex grow max-height: 80%;
+  width: auto;*/
+  max-width: 70%;
+  height: auto;
+  display: block;
+}
+
+
+.caption {
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+
+.caption--vertical-vcenter{
+  text-align: center;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#tribute-info {
+  order: 2;
+  margin-left: 5vmin;
+}
+
+@media (min-aspect-ratio: 2/1) {
+  #main {
+    overflow: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .intro {
+    order: 1;
+    margin-left: 0px;
+    text-align: center;
+  }
+  h2 {
+    font-weight: normal;
+  }
+  .scrolling-div {
+    -webkit-scrolling: touch;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 2vmin;
+    display: flex;
+    flex-wrap: nowrap;
+    /* overflow-x: auto;  */
+    overflow: auto;
+    padding: 2vmin;
+    order: 2;
+  }
+  .tribute-info {
+    order: 3;
+    margin-left: 0px;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    min-width: 50vmin;
+    width: auto;
+    height: 50vmin;
+    color: black;
+    display: flex;
+
+    margin: 2vmin;
+  }
+}
+
+@media (max-aspect-ratio: 2/1) {
+  .card {
+    width: 50vmin;
+    height: 50vmin;
+  }
+}
+
+@media (min-width: 900px) and (min-aspect-ratio: 1/5) {
+  #main {
+    background: black;
+    position: relative;
+  }
+
+  .card {
+    width: 40vmin;
+    height: 40vmin;
+  }
+}
