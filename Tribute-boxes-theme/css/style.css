@@ -2,8 +2,8 @@ html,
 body {
   width: 100vw;
   height: 100vh;
-  background: black;
-  color: white;
+  background: #FFF710;
+  color: black;
   display: flex;
   justify-content: center;
   margin: 0px;
@@ -13,9 +13,9 @@ body {
 
 a {
   text-decoration: none;
-  font-weight: bold;
+ font-weight: 900;
   text-transform: uppercase;
-  color: orange;
+  color: black;
 }
 
 a:hover {
@@ -54,6 +54,7 @@ h3{
 }
 .scrolling-div {
   width: auto;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -67,15 +68,16 @@ h3{
   color: black;
   flex: 1 1 auto;
   display: flex;
-  margin: 2vmin;
+ margin: .5vmin;
   padding: 2vmin;
   box-sizing: border-box;
   overflow: auto;
-  opacity: 0.9;
+ /* opacity: 0.9;
+  border: black 2vmin solid;*/
 }
 
 .card:hover {
-  opacity: 1;
+   border: black 1vmin solid;
   z-index: 4;
   transform: scale(1.1);
 }
@@ -83,7 +85,6 @@ h3{
 .card:checked {/* if I add radio buttons, but probably better to make these take over most of page with jquery*/
   z-index: 4;
   transform: scale(1.5);
-  opacity: 1;
 }
 
 
@@ -102,6 +103,7 @@ h3{
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .card--row--center-space {
@@ -116,14 +118,19 @@ h3{
   align-items: flex-start;
 }
   
-.card--green {
-  background: green;
+
+
+.card--color1 {
+  background: #2BADE5;
 }
-.card--blue {
-  background: blue;
+.card--color2 {
+  background: #E6345B;
 }
-.card--red {
-  background: red;
+.card--color3 {
+  background: #FA8716;
+}
+.card--color4{
+  background: #8DD573;
 }
 
 
@@ -142,7 +149,7 @@ h3{
 #image {
   /* to work with flex grow max-height: 80%;
   width: auto;*/
-  max-width: 70%;
+  max-width: 75%;
   height: auto;
   display: block;
 }
@@ -151,6 +158,7 @@ h3{
 .caption {
   font-weight: bold;
   font-variant: small-caps;
+  text-align: center;
 }
 
 
@@ -170,15 +178,19 @@ h3{
   margin-left: 5vmin;
 }
 
-@media (min-aspect-ratio: 2/1) {
+@media (max-height: 500px)and (min-aspect-ratio: 5/3) {
+  body, html{
+     font-size: .8em;
+  }
   #main {
     overflow: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
+    height: auto;
   }
   .intro {
-    order: 1;
+    order: 2;
     margin-left: 0px;
     text-align: center;
   }
@@ -188,6 +200,7 @@ h3{
   .scrolling-div {
     -webkit-scrolling: touch;
     width: 100%;
+    height: 50vmin;
     justify-content: flex-start;
     padding: 2vmin;
     display: flex;
@@ -195,35 +208,40 @@ h3{
     /* overflow-x: auto;  */
     overflow: auto;
     padding: 2vmin;
-    order: 2;
+    order: 1;
   }
   .tribute-info {
     order: 3;
     margin-left: 0px;
   }
-
+  p{
+      font-size: 1.5em;
+  }
   .card {
     flex: 0 0 auto;
+
     min-width: 50vmin;
     width: auto;
-    height: 50vmin;
+    height:50vmin;/*50vmin;*/
     color: black;
     display: flex;
-
     margin: 2vmin;
+  }
+  .caption{
+    display: none;
   }
 }
 
 @media (max-aspect-ratio: 2/1) {
   .card {
     width: 50vmin;
-    height: 50vmin;
+    height: auto;
   }
 }
 
 @media (min-width: 900px) and (min-aspect-ratio: 1/5) {
   #main {
-    background: black;
+   /* background: black;*/
     position: relative;
   }
 
