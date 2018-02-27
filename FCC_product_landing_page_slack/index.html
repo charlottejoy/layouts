@@ -39,7 +39,16 @@ For now, the test suite only works in Chrome! Please read the README below in th
 2. My product landing page should have at least one media query.
 3. My product landing page should utilize CSS flexbox at least once. 
 -->
+<div class="full-menu menu-move-right">
+	<div class="hamburger" id="menu-hamburger"><p>☰</p></div>
+		<div class="menu-links--full ">
+			<a href="#video" class="nav-link">video</a>
+			<a href="#form" class="nav-link">form</a>
+			<a href="#footer" class="nav-link">footer</a>
+	</div>
 
+</div>
+	
 <header id="header">
 
 	<nav id="nav-bar">
@@ -51,6 +60,7 @@ For now, the test suite only works in Chrome! Please read the README below in th
 			<a href="#form" class="nav-link">form</a>
 			<a href="#footer" class="nav-link">footer</a>
 		</div>
+		<div class="hamburger" id="page-hamburger"><p>☰</p></div>
 	</nav>
 </header>
 <main>
@@ -168,6 +178,7 @@ For now, the test suite only works in Chrome! Please read the README below in th
 </div>
 </div>
 <div class="footer--terms-social">
+	<div class="footer--terms-social-contents">
 	<ul>
 		<li>Status</li>
 		<li>Privacy & Terms</li>
@@ -185,9 +196,11 @@ For now, the test suite only works in Chrome! Please read the README below in th
 		</ul>
 	</div>
 	</div>
+	</div>
 </div>
 </footer>
   <script src='https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
   
 
