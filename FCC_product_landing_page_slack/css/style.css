@@ -14,17 +14,20 @@ html, body{
 	align-items: center;
 	font-family: "helvetica", "arial", sans-serif;
 }
-header{
+.header{
 	height: 90px;
-	position: fixed;
 	top: 0px;
-	z-index: 4;
 width: 100%;
 display: flex;
-	justify-content: center;
 	box-sizing: border-box;
 		border-bottom: 2px solid #F6F6F7; 
 }
+#header{
+		justify-content: center;
+		position: fixed;
+	z-index: 4;
+}
+
 h1, h2{
 	margin-bottom: 0px;
 }
@@ -37,7 +40,7 @@ h1, h2{
 .logo{
 	width: 100px;
 }
-nav{
+#nav-bar{
 	width:95%;
 	max-width: 1400px;
 	background: white;
@@ -54,9 +57,12 @@ nav{
 	display:none;
 	font-size: 2em;
 }
-.menu-links{
+#nav-bar .menu-links{
 	display: flex;
 	flex-direction: row;
+}
+#nav-bar .menu-links a{
+	display: block;
 }
 .menu-links a{
 	text-decoration: none;
@@ -64,9 +70,11 @@ nav{
 	font-weight: 600;
 	text-transform: uppercase;
 	padding: 0 3vw;
-	display: block;
 }
 
+.full-menu{
+	display: none;
+}
 main{
 width: 100%;
 	display: flex;
@@ -89,6 +97,17 @@ width: 100%;
 	max-width: 1400px;
 	
 }
+
+
+.button--email-submit{
+	background: #303584;
+	border: none;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	padding: .5em;
+	boz-sizing: border-box;
+}
+.input--email-submit{}
 .video-container-parent{
 	max-width: 500px;
 	width: 50%;
@@ -183,15 +202,15 @@ margin: 1vmin;
 		border-bottom: 1px solid lightgrey;
 }
 .section--free-try{
-	flex-direction: row wrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
+	justify-content: center;
 	border-top:  1px solid lightgrey;
 		border-bottom: 1px solid lightgrey;
 		width: 95%;
 	max-width: 1400px;
 	padding:40px;
-
 	box-sizing: border-box;
 }
 .free-text, .signup--1cta{
@@ -218,7 +237,7 @@ width: 100%;
 	max-width: 1400px;
 	padding-top: 100px;
 		display: flex;
-	flex-direction: row wrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	
 }
@@ -241,6 +260,7 @@ width: 100%;
 .footer-menu-block ul{
 	list-style: none;
 	padding: 0px;
+	
 }
 .footer-menu-block li{
 	margin: 10px 0;
@@ -258,12 +278,14 @@ background: #F6F6F7;
 	width: 95%;
 	max-width: 1400px;
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	box-sizing: border-box;
 		padding: 100px 50px;
 }
 .footer--terms-social ul, .social li{
 	display: flex;
+	flex-flow: row wrap;
 	list-style: none;
 	padding: 0px;	
 }
@@ -284,13 +306,13 @@ background: #F6F6F7;
 		display: block;
 	}
 	#menu-hamburger{
-		height: 90px;
-		text-align: right;
+		/*height: 90px;*/
+	/*	text-align: right;*/
 	}
 	/*.menu-links--full*/
 	.full-menu{
-	width: 100vw;
-	background: green;
+width: 100vw;
+	background: #303584;
 	height: 100vh;
 	box-sizing: border-box;
 	overflow: hidden;
@@ -299,20 +321,27 @@ background: #F6F6F7;
 		z-index: 7;
 		display: flex;
 		flex-direction: column;
-		padding: 10px;
+		align-items: center;
+	/*	padding: 10px;*/
+	
+  
 		/*smooth transition*/
 }
 	.menu-move-left{
-		right: 0px;
+		right: 0vw;
 	}
 	.menu-move-right{
-	right: 100vw;	
+right: 100vw;	
 	}
 	
-	.logo{
-		
-	}
-.menu-links{
+	.header--full-menu{
+		justify-content: space-between;
+		align-items: center;
+			width:95%;
+	max-width: 1400px;
+}
+
+#nav-bar .menu-links{
 		display: none;
 	}
 	.menu-links--full {
@@ -321,10 +350,11 @@ background: #F6F6F7;
 		align-items: flex-start;
 		justify-content: center;
 		width: 100%;
-		padding: 10px;
 	}
 	.menu-links--full a{
 		font-size: 2em;
+		padding-top: 1em;
+		color: white;
 	}
 	#submit{
 		order: 3;
@@ -342,4 +372,18 @@ background: #F6F6F7;
 	nav--open{
 		height:400px;
 	}*/
+}
+@media (max-width: 500px){
+	
+	form, .free-text, .signup--1cta{
+		width: 100%;
+		max-width: 800px;
+		background: blue;
+	}
+	.button--email-submit{
+		width: 100%;
+	}
+	.input--email-submit{
+		width: 100%;
+	}
 }

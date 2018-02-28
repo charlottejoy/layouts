@@ -39,17 +39,22 @@ For now, the test suite only works in Chrome! Please read the README below in th
 2. My product landing page should have at least one media query.
 3. My product landing page should utilize CSS flexbox at least once. 
 -->
-<div class="full-menu menu-move-right">
-	<div class="hamburger" id="menu-hamburger"><p>☰</p></div>
-		<div class="menu-links--full ">
+<nav class="full-menu menu-move-right">
+	<div class="header header--full-menu">
+	<div class="logo">
+			<img src="https://image.flaticon.com/icons/svg/234/234079.svg">
+		</div>
+	<div class="hamburger" id="menu-hamburger"><p>X</p></div>
+	</div>
+		<div class="menu-links menu-links--full ">
 			<a href="#video" class="nav-link">video</a>
 			<a href="#form" class="nav-link">form</a>
 			<a href="#footer" class="nav-link">footer</a>
 	</div>
-
-</div>
 	
-<header id="header">
+</nav>
+	
+<header id="header" class="header">
 
 	<nav id="nav-bar">
 		<div class="logo">
@@ -73,10 +78,10 @@ For now, the test suite only works in Chrome! Please read the README below in th
 			</div>
 			<div class="form-container">
 				<form id="form" action="https://www.freecodecamp.com/email-submit">
-					<!--<div class="signup-signin">--><label for="email">Email:</label> <input type="email" id="email" name="email" placeholder="your@email.com">
+					<!--<div class="signup-signin"><label for="email">Email:</label>--> <input type="email" id="email" name="email" placeholder="Email address" class="input--email-submit">
 
 					<!--</div>-->
-					<input type="submit" id="submit">
+					<input type="submit" id="submit" value= "Get Started" class="button--email-submit">
 					<p class="signin-question"> Already signed up? <a href="#">Get cracking</a></p>
 
 				</form>
@@ -117,9 +122,8 @@ For now, the test suite only works in Chrome! Please read the README below in th
 			<p> A very small stage in a vast cosmic arena. Explorations </p>
 		</div>
 		<form class="signup--1cta">
-			<input type="email">
-			</input>
-			<button>Get Started </button>
+			<input type="email" placeholder="Email address" class="input--email-submit">
+					<input type="submit" value= "Get Started" class="button--email-submit">
 		</form>
 	</div>
 </main>
