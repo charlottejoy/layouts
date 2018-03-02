@@ -9,7 +9,7 @@ $("#menu-hamburger").click(function(){
 	$(".full-menu").css({right: 100});
 });
 */
-$(".hamburger").click(function () {
+$(".hamburger, .menu-links--full a").click(function () {
 	$("body").toggleClass("no-overflow");
 	$(".full-menu").toggleClass("move-menu-left, menu-move-right");
 });
