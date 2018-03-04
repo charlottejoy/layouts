@@ -6,7 +6,8 @@
   <title>Product Landing Page- FCC: Test Suite Template</title>
   
   
-  
+  <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.8/css/all.css'>
+
       <link rel="stylesheet" href="css/style.css">
 
   
@@ -45,13 +46,13 @@ For now, the test suite only works in Chrome! Please read the README below in th
 	<div class="logo">
 			<img src="https://image.flaticon.com/icons/svg/234/234079.svg">
 		</div>
-	<div class="hamburger" id="menu-hamburger"><p>𝗫</p></div>
+	<div class="hamburger" id="menu-hamburger"><p>X</p></div>
 	</div>
 	</div>
 		<div class="menu-links menu-links--full ">
-			<a href="#video" class="nav-link">video</a>
-			<a href="#form" class="nav-link">form</a>
-			<a href="#footer" class="nav-link">footer</a>
+			<a href="#about-anchor" class="nav-link">About</a>
+			<a href="#clients-anchor" class="nav-link">Clients</a>
+			<a href="#trial-anchor" class="nav-link">Trial</a>
 	</div>
 	
 </nav>
@@ -63,21 +64,22 @@ For now, the test suite only works in Chrome! Please read the README below in th
 			<img id="header-img" src="https://image.flaticon.com/icons/svg/234/234079.svg">
 		</div>
 		<div class="menu-links">
-			<a href="#video" class="nav-link">video</a>
-			<a href="#form" class="nav-link">form</a>
-			<a href="#footer" class="nav-link">footer</a>
+		<a href="#about-anchor" class="nav-link">About</a>
+			<a href="#clients-anchor" class="nav-link">Clients</a>
+			<a href="#trial-anchor" class="nav-link">Trial</a>
 		</div>
 		<div class="hamburger" id="page-hamburger"><p>☰</p></div>
 	</nav>
 </header>
 <main>
+	
 	<div class="section section--top">
+		<a id="about-anchor"></a>
 		<div class="info-form info-form--top">
 			<div class="info">
 				<h1> This is the thing</h1>
-				<p>Next up social media icons<a href="https://fontawesome.com/icons?d=gallery" target="_blank">from Font Awesome</a></p>
 				<p>A very small stage in a vast cosmic arena. Explorations courage of our questions network of wormholes. Orion's sword Vangelis.</p> 
-				<p>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+				<p>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market" target="_blank">Vectors Market</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
 				</p>
 			</div>
 			<div class="form-container">
@@ -96,10 +98,13 @@ For now, the test suite only works in Chrome! Please read the README below in th
 				<iframe src="https://www.youtube.com/embed/9RJZMSsH7-g" allowfullscreen id="video"></iframe>
 			</div>
 		</div>
+
 	</div>
 
-	<div class="section section--clients">
+	<div class="section section--clients" id="clients">
+			<a id="clients-anchor"></a>
 		<div class="section--clients-content">
+				
 		<h2> These people like it </h2>
 		<p> A very small stage in a vast cosmic arena. Explorations courage of our questions network of wormholes. Orion's sword Vangelis.</p>
 		<button class="button button--more">More</button>
@@ -119,7 +124,8 @@ For now, the test suite only works in Chrome! Please read the README below in th
 		</div>
 	</div>
 	</div>
-	<div class="section section--free-try">
+	<div class="section section--free-try" id="trial">
+		<a id="trial-anchor"></a>
 		<div class="free-text">
 			<h2> Try it for free</h2>
 			<p> A very small stage in a vast cosmic arena. <a href="#">Explorations</a> </p>
@@ -198,9 +204,9 @@ For now, the test suite only works in Chrome! Please read the README below in th
 	</div>
 	<div class="social">
 		<ul>
-			<li><a href="#">F</a></li>
-			<li><a href="#">T</a></li>
-				<li><a href="#">LI</a></li>
+			<li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
+			<li><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+			<li><a href="#"><i class="fab fa-youtube fa-lg"></i></a></li>
 		</ul>
 	</div>
 	</div>
