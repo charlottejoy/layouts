@@ -2,18 +2,18 @@ html,
 body {
   width: 100vw;
   height: 100vh;
-  background: #FFF710;
+  background: #fff710;
   color: black;
   display: flex;
   justify-content: center;
   margin: 0px;
   font-family: "helvetica", "arial", sans-serif;
-  font-size: 1.15em;
+  /*font-size: 1.15em;*/
 }
 
 a {
   text-decoration: none;
- font-weight: 900;
+  font-weight: 900;
   text-transform: uppercase;
   color: black;
 }
@@ -46,12 +46,15 @@ h2 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-h3{
+h3 {
   font-weight: bold;
   font-variant: small-caps;
   margin-top: 0px;
-  margin-bottom: 0px; 
+  margin-bottom: 0px;
 }
+  p {
+    font-size: 1.5em;
+  }
 .scrolling-div {
   width: auto;
   height: auto;
@@ -68,25 +71,17 @@ h3{
   color: black;
   flex: 1 1 auto;
   display: flex;
- margin: .5vmin;
+  margin: 0.5vmin;
   padding: 2vmin;
   box-sizing: border-box;
   overflow: auto;
- /* opacity: 0.9;
-  border: black 2vmin solid;*/
 }
 
 .card:hover {
-   border: black 1vmin solid;
+  border: black 1vmin solid;
   z-index: 4;
   transform: scale(1.1);
 }
-
-.card:checked {/* if I add radio buttons, but probably better to make these take over most of page with jquery*/
-  z-index: 4;
-  transform: scale(1.5);
-}
-
 
 .card--row--center {
   flex-direction: row;
@@ -109,41 +104,43 @@ h3{
 .card--row--center-space {
   justify-content: space-around;
   flex-direction: row;
- align-items: center;
+  align-items: center;
 }
 
-.card--column--top-left {
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: flex-start;
-}
+.card--text {
+  padding: 3vmin;
+ display: flex;
+justify-content: center;
   
-
+}
+.card--text__wrapper{
+  max-width: 400px;
+}
 
 .card--color1 {
-  background: #2BADE5;
+  background: #2bade5;
 }
 .card--color2 {
-  background: #E6345B;
+  background: #e6345b;
 }
 .card--color3 {
-  background: #FA8716;
+  background: #fa8716;
 }
-.card--color4{
-  background: #8DD573;
+.card--color4 {
+  background: #8dd573;
 }
-
-
 
 .row-img {
   max-height: 80%;
   width: auto;
+  max-width: 100%;
   display: block;
 }
 
-.column-img{
-    max-width: 80%;
+.column-img {
+  max-width: 80%;
   height: auto;
+  max-height: 100%;
   display: block;
 }
 #image {
@@ -154,20 +151,17 @@ h3{
   display: block;
 }
 
-
 .caption {
   font-weight: bold;
   font-variant: small-caps;
   text-align: center;
 }
 
-
-.caption--vertical-vcenter{
+.caption--vertical-vcenter {
   text-align: center;
   writing-mode: vertical-lr;
   text-orientation: upright;
 }
-
 
 ::-webkit-scrollbar {
   display: none;
@@ -178,9 +172,11 @@ h3{
   margin-left: 5vmin;
 }
 
-@media (max-height: 500px)and (min-aspect-ratio: 5/3) {
-  body, html{
-     font-size: .8em;
+
+@media (min-height: 250px) and (max-height: 500px) and (min-aspect-ratio: 5/3) {
+  body,
+  html {
+    font-size: 0.8em;
   }
   #main {
     overflow: auto;
@@ -205,7 +201,6 @@ h3{
     padding: 2vmin;
     display: flex;
     flex-wrap: nowrap;
-    /* overflow-x: auto;  */
     overflow: auto;
     padding: 2vmin;
     order: 1;
@@ -214,34 +209,33 @@ h3{
     order: 3;
     margin-left: 0px;
   }
-  p{
-      font-size: 1.5em;
-  }
+
   .card {
     flex: 0 0 auto;
-
     min-width: 50vmin;
     width: auto;
-    height:50vmin;/*50vmin;*/
+    height: 50vmin;
     color: black;
     display: flex;
     margin: 2vmin;
   }
-  .caption{
+  .caption {
     display: none;
   }
 }
 
-@media (max-aspect-ratio: 2/1) {
+@media (max-aspect-ratio: 2/1) and (min-height:250px) {
   .card {
     width: 50vmin;
     height: auto;
   }
+/*  .card--text + img{
+  max-width: 50%;
+}*/
 }
 
 @media (min-width: 900px) and (min-aspect-ratio: 1/5) {
   #main {
-   /* background: black;*/
     position: relative;
   }
 
@@ -249,4 +243,35 @@ h3{
     width: 40vmin;
     height: 40vmin;
   }
+}
+
+@media(max-height:249px){
+  .scrolling-div{
+  width: auto;
+  height: auto;
+    padding: 2vw;
+  }
+  .card{
+  width: auto;
+  height: 95vh;
+  }
+.column-img {
+  max-height: 80%;
+  width: auto;
+}
+  #image {
+  max-width: auto;
+  height: 75%;
+}
+  #main {
+    overflow: auto;
+  }
+}
+@media(max-width: 249px){
+
+  .row-img {
+  max-width: 90%;
+  height: auto;
+}
+
 }
